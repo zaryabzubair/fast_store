@@ -1,15 +1,15 @@
 echo "virtual environment setup"
-python -m venv venv
+python3.12 -m venv venv
 
 echo "activate virtual environment"
 source venv/bin/activate
 
 echo "installing dependencies"
-pip install -r requirements.txt
+pip3.12 install -r requirements.txt
 
 echo "static files"
-python manage.py collectstatic --noinput --clear
+python3.12 manage.py collectstatic --noinput --clear
 
 echo "migrate"
-python manage.py makemigrations
-python manage.py migrate
+python3.12 manage.py makemigrations
+python3.12 manage.py migrate
